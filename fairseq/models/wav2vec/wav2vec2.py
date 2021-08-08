@@ -501,9 +501,9 @@ class Wav2Vec2Model(BaseFairseqModel):
         """
 
         def _conv_out_length(input_length, kernel_size, stride):
-            print(input_length)
-            print(kernel_size)
-            print(stride)
+            print(input_length, type(input_length))
+            print(kernel_size, type(kernel_size))
+            print(stride, type(stride))
             return torch.floor((input_length - kernel_size) / stride + 1)
 
         conv_cfg_list = eval(self.cfg.conv_feature_layers)
